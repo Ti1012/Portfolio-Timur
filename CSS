@@ -1,0 +1,309 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.glow {
+    text-align:center;
+    color:rgba(255,255,255,.3);
+    text-shadow: 0 0 1px rgba(157,208,154,.3); // Fallback for nonCSS3?
+    /* Stripes */
+    /*Fallback:
+  http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
+  */
+background: -webkit-linear-gradient(transparent, transparent),               url(https://i.imgur.com/WyMyxQ6.png) repeat;
+    /* clipping webkit magic */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Animation */
+    -webkit-animation: glow 3s infinite alternate;
+    -moz-animation: glow 3s infinite alternate;
+    animation: glow 3s infinite alternate;
+    -webkit-animation-timing-function: cubic-bezier(1,.3,.79,.81);
+    -moz-animation-timing-function: cubic-bezier(1,.3,.79,.81);
+    animation-timing-function: cubic-bezier(1,.3,.79,.81);
+}
+
+@-webkit-keyframes glow {
+    0% {
+        text-shadow: 0 0 1px rgba(255,255,255,.1),
+        0 0 3px rgba(255,255,255,.1),
+        0 0 5px rgba(157,208,154,.3);
+    }
+    50% {
+        text-shadow: 0 0 2px rgba(255,255,255,.1),
+        0 0 5px rgba(255,255,255,.1);
+    }
+    52% {
+        text-shadow: 0 0 5px rgba(157,208,154,.3);
+    }
+    54% {
+        text-shadow: 0 0 2px rgba(255,255,255,.1),
+        0 0 5px rgba(255,255,255,.1);
+    }
+    100% {
+        text-shadow: 0 0 2px rgba(255,255,255,.1),
+        0 0 5px rgba(255,255,255,.1),
+        0 0 10px rgba(157,208,154,.3);
+    }
+}
+
+@-moz-keyframes glow {
+    0% {
+        text-shadow: 0 0 1px rgba(255,255,255,.1),
+        0 0 3px rgba(255,255,255,.1),
+        0 0 5px rgba(157,208,154,.3);
+    }
+    50% {
+        text-shadow: 0 0 2px rgba(255,255,255,.1),
+        0 0 5px rgba(255,255,255,.1);
+    }
+    52% {
+        text-shadow: 0 0 5px rgba(157,208,154,.3);
+    }
+    54% {
+        text-shadow: 0 0 2px rgba(255,255,255,.1),
+        0 0 5px rgba(255,255,255,.1);
+    }
+    100% {
+        text-shadow: 0 0 2px rgba(255,255,255,.1),
+        0 0 5px rgba(255,255,255,.1),
+        0 0 10px rgba(157,208,154,.3);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 1px rgba(255,255,255,.1),
+        0 0 3px rgba(255,255,255,.1),
+        0 0 5px rgba(157,208,154,.3);
+    }
+    50% {
+        text-shadow: 0 0 2px rgba(255,255,255,.1),
+        0 0 5px rgba(255,255,255,.1);
+    }
+    52% {
+        text-shadow: 0 0 5px rgba(157,208,154,.3);
+    }
+    54% {
+        text-shadow: 0 0 2px rgba(255,255,255,.1),
+        0 0 5px rgba(255,255,255,.1);
+    }
+    100% {
+        text-shadow: 0 0 2px rgba(255,255,255,.1),
+        0 0 5px rgba(255,255,255,.1),
+        0 0 10px rgba(157,208,154,.3);
+    }
+}
+
+nav ul {
+    background: #1F1011;
+    display: flex;
+    justify-content: right;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav li {
+    list-style: none;
+    padding: 25px 30px;
+}
+
+nav li:hover {
+    background: antiquewhite;
+    color: #1F1011;
+
+}
+
+nav li a {
+    color: inherit;
+    font-family: 'Orbitron', courier, sans-serif;;
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+header {
+    background-color: #1F1011;
+    background-size: cover;
+    color: antiquewhite;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    cursor: default;
+    font-family: 'Orbitron', courier, sans-serif;
+}
+.center{
+    width:100%;
+    height:100%;
+}
+#produce{
+    font-size: 2vh;
+    position: absolute;
+    top: 68%;
+    margin-left: 25%;
+    color: antiquewhite;
+    font-family: 'Orbitron', courier, sans-serif;
+}
+
+h1 {
+    font-size: 10vh;
+    position: absolute;
+    top: 72%;
+    margin-left: 17%;
+
+}
+
+#about h2 {
+    color: antiquewhite;
+    font-family: 'Orbitron', courier, sans-serif;
+    font-size: 5vh;
+    top: 24%;
+    position: absolute;
+    margin-left: 50%;
+    cursor: default;
+    caret-color: transparent;
+
+}
+
+#about p {
+    font-size: 2vh;
+    position: absolute;
+    top: 34%;
+    margin-left: 50%;
+    color: antiquewhite;
+    font-family: 'Orbitron', courier, sans-serif;
+    line-height: 2.0;
+    cursor: default;
+    caret-color: transparent;
+
+
+}
+.backMe{
+    position: absolute;
+    top: 20%;
+    margin-left: 38%;
+    width: 60%;
+}
+
+.me{
+    position: absolute;
+    top: 10%;
+    margin-left: 23%;
+}
+
+#about {
+    background: gray;
+    background-size: 25vw;
+    color: darkslategray;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+#portfolio {
+    background: lightgray;
+    position: absolute;
+    top: 200%;
+    width: 100%;
+    height: 100%;
+}
+
+#portfolio h2 {
+    margin: 10vh 0 5vh 0;
+    text-align: center;
+    color: #1F1011;
+    font-family: 'Orbitron', courier, sans-serif;
+    cursor: default;
+    caret-color: transparent;
+    font-size: 5vh;
+}
+.flashcards{
+    position: absolute;
+    top: 20%;
+    margin-left: 35%;
+    }
+
+.piano{
+    position: absolute;
+    top: 60%;
+    margin-left: 35%;
+    }
+
+
+#portfolio img {
+    width: 30vw;
+    height: 34vh;
+}
+
+.portfolioF{
+    position: absolute;
+    text-align: center;
+    color: #1F1011;
+    font-family: 'Orbitron', courier, sans-serif;
+    cursor: default;
+    caret-color: transparent;
+    font-size: 2vh;
+    top: 17%;
+    margin-left: 47%;
+}
+.portfolioV{
+    position: absolute;
+    text-align: center;
+    color: #1F1011;
+    font-family: 'Orbitron', courier, sans-serif;
+    cursor: default;
+    caret-color: transparent;
+    font-size: 2vh;
+    top: 57%;
+    margin-left: 47%;
+}
+#contacts {
+    height: vh;
+    padding-top: 40vh;
+    background-size: 25vw;
+    position: absolute;
+    text-align: center;
+    top: 52%;
+    width: 100%;
+}
+#contacts p{
+    position: absolute;
+    text-align: center;
+    color: #1F1011;
+    font-family: 'Orbitron', courier, sans-serif;
+    cursor: default;
+    caret-color: transparent;
+    font-size: 2vh;
+    margin-left: 38%;
+    top: 94%;
+    line-height: 2.0;
+
+}
+.footerText{
+    font-size: 4vh;
+    font-family: 'Orbitron', courier, sans-serif;
+    cursor: default;
+    caret-color: transparent;
+}
+.date{
+    font-size: 2vh;
+    font-family: 'Orbitron', courier, sans-serif;
+    cursor: default;
+    caret-color: transparent;
+}
+footer {
+    background: #1F1011;
+    color: antiquewhite;
+    height: 8vh;
+    position: absolute;
+    text-align: center;
+    top: 320%;
+    width: 100%;
+}
+
