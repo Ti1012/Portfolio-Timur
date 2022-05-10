@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>CV</title>
     <link rel="stylesheet" href="style.css">
+    <script async src="code.js"></script>
 </head>
 <body>
 <header id="header" onselectstart="return false" onmousedown="return false">
     <p class="glow" id="produce">produced by</p>
     <h1 class="glow">Ti Samatov</h1>
-      <nav>
+      <nav id="menu">
          <ul>
             <li><a href="#about">ABOUT ME</a></li>
             <li><a href="#portfolio">PORTFOLIO</a></li>
@@ -18,7 +19,16 @@
          </ul>
     </nav>
     <img src="cyberpunk.jpg" class="center">
-
+    <div class="hamburger">
+        <img id="open-menu-hamburger" src="img/ham-menu-icon.jpg" alt="Menu">
+        <nav id="menu-hamburger">
+            <div><a href="#about"><p>About me</p></a></div>
+            <div><a href="#portfolio"><p>Portfolio</p></a></div>
+            <div><a href="#contacts"><p>Contacts</p></a></div>
+            <div><a href=""><p>HOME</p></a></div>
+            <span id="close-menu-hamburger"><a href="#open-menu-hamburger">Close</a></span>
+        </nav>
+    </div>
 </header>
 <main>
     <section id="about">
@@ -33,14 +43,33 @@
         <br>I am easy adaptable person to a new job, I quickly learn to work and easy find approach with people around me.
         <br><b>Skills:</b> HTML, CSS, JS, React, Kotlin.</p>
     </section>
+
     <section id="portfolio">
         <h2>Portfolio</h2>
-                <img class="flashcards" src="world.jpg" width="800" height="450">
-                <p class="portfolioF">Flashcards</p>
-
-                <img class="piano" src="piano.jpg" width="800" height="450">
-                <p class="portfolioV">Virtual Piano</p>
+        <img class="flashcards" src="world.jpg" width="800" height="450">
+        <div class = "container">
+            <p><button class="open-window button" id="oBtn1" type="button">Flashcards</button></p>
+        </div>
+        <div class="window" id="modal1">
+            <div class="project" id="pr1">
+                <p>You can see the project at the following link: <a href="https://github.com/Ti1012/Flash-Cards">flashcards</a></p>
+                <p>If you are a beginner web developer, you need to know the basics of CSS and HTML. This project is great for those who need somewhere to start. Your goal is to create a stylized page with flashcards, each containing a question on one side and the answer on the other. You can choose any subject you want for your Flashcards!</p>
+                <button class="close" id="cBtn1" type="button">Close</button>
+            </div>
+        </div>
+        <img class="piano" src="piano.jpg" width="800" height="450">
+        <div class="container2">
+            <p><button class="open-window button" id="oBtn2" type="button">Virtual Piano</button></p>
+        </div>
+        <div class="window" id="modal2">
+            <div class="project" id="pr2">
+                <p>You can see the project at the following link: <a href="https://github.com/Ti1012/Virtual-piano">Virtual Piano</a></p>
+                <p>If you are a beginner web developer, you need to know the basics of CSS and HTML. This project is great for those who need somewhere to start. Your goal is to create a stylized page with flashcards, each containing a question on one side and the answer on the other. You can choose any subject you want for your Virtual Piano!</p>
+                <button class="close" id="cBtn2" type="button">Close</button>
+            </div>
+        </div>
         <section/>
+
     <section id="contacts">
         <h2>Contacts</h2>
         <p>You can contact me at - 4padzz@gmail.com<br>phone number - 079-304 51 59</p>
@@ -50,5 +79,6 @@
     <h2 class="footerText">Ti Samatov</h2>
     <h2 class="date">2022</h2>
 </footer>
+
 </body>
 </html>
