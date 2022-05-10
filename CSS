@@ -148,6 +148,8 @@ header {
     margin-left: 25%;
     color: antiquewhite;
     font-family: 'Orbitron', courier, sans-serif;
+    caret-color: transparent;
+
 }
 
 h1 {
@@ -215,7 +217,7 @@ h1 {
 }
 
 #portfolio h2 {
-    margin: 10vh 0 5vh 0;
+    margin: 6vh 0 5vh 0;
     text-align: center;
     color: #1F1011;
     font-family: 'Orbitron', courier, sans-serif;
@@ -235,7 +237,6 @@ h1 {
     margin-left: 35%;
     }
 
-
 #portfolio img {
     width: 30vw;
     height: 34vh;
@@ -252,6 +253,9 @@ h1 {
     top: 17%;
     margin-left: 47%;
 }
+
+
+
 .portfolioV{
     position: absolute;
     text-align: center;
@@ -263,16 +267,137 @@ h1 {
     top: 57%;
     margin-left: 47%;
 }
+.container{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container2{
+    position: absolute;
+    top: 55.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.button{
+    background: antiquewhite;
+    padding: 10px 15px;
+    color: #1F1011;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 6px 6px 29px -4px;
+    margin-top: 25px;
+    transition: 0.4s;
+}
+.button:hover{
+    background: #1F1011;
+    color: antiquewhite;
+}
+.window {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: none;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.project {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    animation-name: animatetop;
+    animation-duration: 1.5s;
+}
+
+.close {
+    width: 60px;
+}
+
+#hamburger-menu a {
+    color: antiquewhite;
+}
+#hamburger-menu a:hover, #close-menu-hamburger:hover, header h1:hover {
+    color: #1F1011;
+}
+#menu-hamburger {
+    height: 500px;
+    width: 130px;
+    background-color: #00bfff;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    top: 200px;
+    left: 0;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px 20px 0;
+    font-size: 17px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px aqua, 0 0 20px magenta, 0 0 10px midnightblue inset,
+    cursor: pointer;
+}
+
+
+@media (min-width: 1100px) {
+    .hamburger, #menu-hamburger {
+        display: none;
+    }
+
+    #open-menu-hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 1099px) {
+    #open-menu-hamburger {
+        display: block;
+    }
+
+    #portfolio {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 40px;
+        background-color: dodgerblue;
+    }
+
+    #menu {
+        display: none;
+    }
+}
+
+#close-menu-hamburger {
+    font-family: 'Langar', cursive;
+}
+
+#open-menu-hamburger {
+    height: 30px;
+    width: 30px;
+}
 #contacts {
     height: vh;
     padding-top: 40vh;
     background-size: 25vw;
     position: absolute;
     text-align: center;
-    top: 52%;
+    top: 56%;
     width: 100%;
 }
 #contacts p{
+    justify-content: space-around;
+
     position: absolute;
     text-align: center;
     color: #1F1011;
@@ -292,6 +417,7 @@ h1 {
     caret-color: transparent;
 }
 .date{
+    justify-content: space-around;
     font-size: 2vh;
     font-family: 'Orbitron', courier, sans-serif;
     cursor: default;
@@ -305,5 +431,7 @@ footer {
     text-align: center;
     top: 320%;
     width: 100%;
+    justify-content: space-around;
+
 }
 
